@@ -1,0 +1,238 @@
+C:\Test>python emotion_classification_cnn_using_keras.py
+Found 28709 images belonging to 7 classes.
+Found 3589 images belonging to 7 classes.
+C:\Users\cpu\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\legacy\adam.py:117: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 48, 48, 64)        640
+
+ batch_normalization (BatchN  (None, 48, 48, 64)       256
+ ormalization)
+
+ activation (Activation)     (None, 48, 48, 64)        0
+
+ max_pooling2d (MaxPooling2D  (None, 24, 24, 64)       0
+ )
+
+ dropout (Dropout)           (None, 24, 24, 64)        0
+
+ conv2d_1 (Conv2D)           (None, 24, 24, 128)       204928
+
+ batch_normalization_1 (Batc  (None, 24, 24, 128)      512
+ hNormalization)
+
+ activation_1 (Activation)   (None, 24, 24, 128)       0
+
+ max_pooling2d_1 (MaxPooling  (None, 12, 12, 128)      0
+ 2D)
+
+ dropout_1 (Dropout)         (None, 12, 12, 128)       0
+
+ conv2d_2 (Conv2D)           (None, 12, 12, 512)       590336
+
+ batch_normalization_2 (Batc  (None, 12, 12, 512)      2048
+ hNormalization)
+
+ activation_2 (Activation)   (None, 12, 12, 512)       0
+
+ max_pooling2d_2 (MaxPooling  (None, 6, 6, 512)        0
+ 2D)
+
+ dropout_2 (Dropout)         (None, 6, 6, 512)         0
+
+ conv2d_3 (Conv2D)           (None, 6, 6, 512)         2359808
+
+ batch_normalization_3 (Batc  (None, 6, 6, 512)        2048
+ hNormalization)
+
+ activation_3 (Activation)   (None, 6, 6, 512)         0
+
+ max_pooling2d_3 (MaxPooling  (None, 3, 3, 512)        0
+ 2D)
+
+ dropout_3 (Dropout)         (None, 3, 3, 512)         0
+
+ flatten (Flatten)           (None, 4608)              0
+
+ dense (Dense)               (None, 256)               1179904
+
+ batch_normalization_4 (Batc  (None, 256)              1024
+ hNormalization)
+
+ activation_4 (Activation)   (None, 256)               0
+
+ dropout_4 (Dropout)         (None, 256)               0
+
+ dense_1 (Dense)             (None, 512)               131584
+
+ batch_normalization_5 (Batc  (None, 512)              2048
+ hNormalization)
+
+ activation_5 (Activation)   (None, 512)               0
+
+ dropout_5 (Dropout)         (None, 512)               0
+
+ dense_2 (Dense)             (None, 7)                 3591
+
+=================================================================
+Total params: 4,478,727
+Trainable params: 4,474,759
+Non-trainable params: 3,968
+_________________________________________________________________
+C:\Test\emotion_classification_cnn_using_keras.py:152: UserWarning: `Model.fit_generator` is deprecated and will be removed in a future version. Please use `Model.fit`, which supports generators.
+  history = model.fit_generator(generator=train_set,
+Epoch 1/48
+224/224 [==============================] - ETA: 0s - loss: 1.7850 - accuracy: 0.3105WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 458s 2s/step - loss: 1.7850 - accuracy: 0.3105 - val_loss: 1.6753 - val_accuracy: 0.3532 - lr: 0.0010
+Epoch 2/48
+224/224 [==============================] - ETA: 0s - loss: 1.4309 - accuracy: 0.4525WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 392s 2s/step - loss: 1.4309 - accuracy: 0.4525 - val_loss: 1.4422 - val_accuracy: 0.4509 - lr: 0.0010
+Epoch 3/48
+224/224 [==============================] - ETA: 0s - loss: 1.2746 - accuracy: 0.5147WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 397s 2s/step - loss: 1.2746 - accuracy: 0.5147 - val_loss: 1.3109 - val_accuracy: 0.5075 - lr: 0.0010
+Epoch 4/48
+224/224 [==============================] - ETA: 0s - loss: 1.1859 - accuracy: 0.5477WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 429s 2s/step - loss: 1.1859 - accuracy: 0.5477 - val_loss: 1.1811 - val_accuracy: 0.5522 - lr: 0.0010
+Epoch 5/48
+224/224 [==============================] - ETA: 0s - loss: 1.1191 - accuracy: 0.5766WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 448s 2s/step - loss: 1.1191 - accuracy: 0.5766 - val_loss: 1.1450 - val_accuracy: 0.5675 - lr: 0.0010
+Epoch 6/48
+224/224 [==============================] - ETA: 0s - loss: 1.0685 - accuracy: 0.5941WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 406s 2s/step - loss: 1.0685 - accuracy: 0.5941 - val_loss: 1.1628 - val_accuracy: 0.5653 - lr: 0.0010
+Epoch 7/48
+224/224 [==============================] - ETA: 0s - loss: 1.0211 - accuracy: 0.6139WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 407s 2s/step - loss: 1.0211 - accuracy: 0.6139 - val_loss: 1.1875 - val_accuracy: 0.5483 - lr: 0.0010
+Epoch 8/48
+224/224 [==============================] - ETA: 0s - loss: 0.9776 - accuracy: 0.6305Restoring model weights from the end of the best epoch: 5.
+WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+
+Epoch 8: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+224/224 [==============================] - 415s 2s/step - loss: 0.9776 - accuracy: 0.6305 - val_loss: 1.2089 - val_accuracy: 0.5432 - lr: 0.0010
+Epoch 8: early stopping
+
+C:\Test>python emotion_classification_cnn_using_keras.py
+Found 28709 images belonging to 7 classes.
+Found 3589 images belonging to 7 classes.
+C:\Users\cpu\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\legacy\adam.py:117: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 48, 48, 64)        640
+
+ batch_normalization (BatchN  (None, 48, 48, 64)       256
+ ormalization)
+
+ activation (Activation)     (None, 48, 48, 64)        0
+
+ max_pooling2d (MaxPooling2D  (None, 24, 24, 64)       0
+ )
+
+ dropout (Dropout)           (None, 24, 24, 64)        0
+
+ conv2d_1 (Conv2D)           (None, 24, 24, 128)       204928
+
+ batch_normalization_1 (Batc  (None, 24, 24, 128)      512
+ hNormalization)
+
+ activation_1 (Activation)   (None, 24, 24, 128)       0
+
+ max_pooling2d_1 (MaxPooling  (None, 12, 12, 128)      0
+ 2D)
+
+ dropout_1 (Dropout)         (None, 12, 12, 128)       0
+
+ conv2d_2 (Conv2D)           (None, 12, 12, 512)       590336
+
+ batch_normalization_2 (Batc  (None, 12, 12, 512)      2048
+ hNormalization)
+
+ activation_2 (Activation)   (None, 12, 12, 512)       0
+
+ max_pooling2d_2 (MaxPooling  (None, 6, 6, 512)        0
+ 2D)
+
+ dropout_2 (Dropout)         (None, 6, 6, 512)         0
+
+ conv2d_3 (Conv2D)           (None, 6, 6, 512)         2359808
+
+ batch_normalization_3 (Batc  (None, 6, 6, 512)        2048
+ hNormalization)
+
+ activation_3 (Activation)   (None, 6, 6, 512)         0
+
+ max_pooling2d_3 (MaxPooling  (None, 3, 3, 512)        0
+ 2D)
+
+ dropout_3 (Dropout)         (None, 3, 3, 512)         0
+
+ flatten (Flatten)           (None, 4608)              0
+
+ dense (Dense)               (None, 256)               1179904
+
+ batch_normalization_4 (Batc  (None, 256)              1024
+ hNormalization)
+
+ activation_4 (Activation)   (None, 256)               0
+
+ dropout_4 (Dropout)         (None, 256)               0
+
+ dense_1 (Dense)             (None, 512)               131584
+
+ batch_normalization_5 (Batc  (None, 512)              2048
+ hNormalization)
+
+ activation_5 (Activation)   (None, 512)               0
+
+ dropout_5 (Dropout)         (None, 512)               0
+
+ dense_2 (Dense)             (None, 7)                 3591
+
+=================================================================
+Total params: 4,478,727
+Trainable params: 4,474,759
+Non-trainable params: 3,968
+_________________________________________________________________
+C:\Test\emotion_classification_cnn_using_keras.py:152: UserWarning: `Model.fit_generator` is deprecated and will be removed in a future version. Please use `Model.fit`, which supports generators.
+  history = model.fit_generator(generator=train_set,
+Epoch 1/48
+224/224 [==============================] - ETA: 0s - loss: 1.7792 - accuracy: 0.3195WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 384s 2s/step - loss: 1.7792 - accuracy: 0.3195 - val_loss: 1.6959 - val_accuracy: 0.3438 - lr: 0.0010
+Epoch 2/48
+224/224 [==============================] - ETA: 0s - loss: 1.4212 - accuracy: 0.4555WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 411s 2s/step - loss: 1.4212 - accuracy: 0.4555 - val_loss: 1.4437 - val_accuracy: 0.4355 - lr: 0.0010
+Epoch 3/48
+224/224 [==============================] - ETA: 0s - loss: 1.2639 - accuracy: 0.5177WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 414s 2s/step - loss: 1.2639 - accuracy: 0.5177 - val_loss: 1.3270 - val_accuracy: 0.5031 - lr: 0.0010
+Epoch 4/48
+224/224 [==============================] - ETA: 0s - loss: 1.1849 - accuracy: 0.5487WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 409s 2s/step - loss: 1.1849 - accuracy: 0.5487 - val_loss: 1.2467 - val_accuracy: 0.5296 - lr: 0.0010
+Epoch 5/48
+224/224 [==============================] - ETA: 0s - loss: 1.1180 - accuracy: 0.5748WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 417s 2s/step - loss: 1.1180 - accuracy: 0.5748 - val_loss: 1.4435 - val_accuracy: 0.4847 - lr: 0.0010
+Epoch 6/48
+224/224 [==============================] - ETA: 0s - loss: 1.0671 - accuracy: 0.5947WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 419s 2s/step - loss: 1.0671 - accuracy: 0.5947 - val_loss: 1.2433 - val_accuracy: 0.5179 - lr: 0.0010
+Epoch 7/48
+224/224 [==============================] - ETA: 0s - loss: 1.0240 - accuracy: 0.6136WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 422s 2s/step - loss: 1.0240 - accuracy: 0.6136 - val_loss: 1.2425 - val_accuracy: 0.5173 - lr: 0.0010
+Epoch 8/48
+224/224 [==============================] - ETA: 0s - loss: 0.9783 - accuracy: 0.6300WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 418s 2s/step - loss: 0.9783 - accuracy: 0.6300 - val_loss: 1.1094 - val_accuracy: 0.5831 - lr: 0.0010
+Epoch 9/48
+224/224 [==============================] - ETA: 0s - loss: 0.9369 - accuracy: 0.6437WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 460s 2s/step - loss: 0.9369 - accuracy: 0.6437 - val_loss: 1.1367 - val_accuracy: 0.5887 - lr: 0.0010
+Epoch 10/48
+224/224 [==============================] - ETA: 0s - loss: 0.8932 - accuracy: 0.6621WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+224/224 [==============================] - 461s 2s/step - loss: 0.8932 - accuracy: 0.6621 - val_loss: 1.3197 - val_accuracy: 0.5268 - lr: 0.0010
+Epoch 11/48
+224/224 [==============================] - ETA: 0s - loss: 0.8567 - accuracy: 0.6778Restoring model weights from the end of the best epoch: 8.
+WARNING:tensorflow:Can save best model only with val_acc available, skipping.
+
+Epoch 11: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+224/224 [==============================] - 457s 2s/step - loss: 0.8567 - accuracy: 0.6778 - val_loss: 1.2075 - val_accuracy: 0.5650 - lr: 0.0010
+Epoch 11: early stopping

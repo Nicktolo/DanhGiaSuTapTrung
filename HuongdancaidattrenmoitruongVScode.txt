@@ -1,0 +1,13 @@
+Tải python https://www.python.org/downloads/
+Tải extension : Python
+
+tải các thư viện bằng Terminal
+pip install matplotlib
+pip install pandas
+pip install opencv-python
+pip install tensorflow
+pip install seaborn
+pip install openpyxl
+
+chạy chương trình:
+python main.py
